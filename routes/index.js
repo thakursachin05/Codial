@@ -6,4 +6,7 @@ console.log("router loaded");
 
 router.get('/', homeController.home);
 router.use('/users', require('./users'));
+
+// router.use('/actionName', require('./actionName'));
+
 module.exports = router;
