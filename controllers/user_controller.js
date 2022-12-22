@@ -49,8 +49,18 @@ module.exports.create = function(req,res){
     });
 }
 
+
 // Sign in and create the session
 module.exports.createSession = function(req,res){
     // Todo later
     return res.redirect('/');
+}
+
+module.exports.destroySession = function(req,res){
+    req.logout({},function(err){
+        console.log(err || "user signed out successfully");
+    });
+
+    return res.redirect('/');
+
 }
